@@ -22,9 +22,9 @@ try {
 
   (function UseLetOrConst() {
     // Use let (or const) instead of var to make the function succeed.
-    var x = 1;
+    const x = 1;
     if (true) {
-      var x = 2;
+      let x = 2;
     }
 
     // Don't make changes below this line
