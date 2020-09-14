@@ -9,7 +9,7 @@ try {
 
   (function Demo() {
     // Use let (or const) instead of var to make the function succeed.
-    const myDemo = "This is a dem";
+    const myDemo = "This is a demo";
 
     // Don't make changes below this line
 
@@ -20,19 +20,19 @@ try {
 
   /// let (or const) ///
 
-  // (function UseLetOrConst() {
-  //   // Use let (or const) instead of var to make the function succeed.
-  //   var x = 1;
-  //   if (true) {
-  //     var x = 2;
-  //   }
+  (function UseLetOrConst() {
+    // Use let (or const) instead of var to make the function succeed.
+    var x = 1;
+    if (true) {
+      var x = 2;
+    }
 
-  //   // Don't make changes below this line
+    // Don't make changes below this line
 
-  //   expect(x).toBe(1);
+    expect(x).toBe(1);
 
-  //   solved++;
-  // })();
+    solved++;
+  })();
 
   /// Template strings ///
 
