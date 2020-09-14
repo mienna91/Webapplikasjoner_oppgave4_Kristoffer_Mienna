@@ -328,12 +328,12 @@ try {
 
   /// Method definitions (bonus) ///
 
-  /*
+  
 	(function UseMethodDefinitions() {
 		// Use method properties to remove unnecessary syntax. DO NOT use arrow functions.
 		let obj = {
-			add: function (a, b) { return a + b; },
-			subtract: function (a, b) { return a - b; }
+			add(a, b) { return a + b; },
+			subtract(a, b) { return a - b; }
 		}
 
 		// Don't make changes below this line	
@@ -343,14 +343,17 @@ try {
 		
 		solvedBonus++;
 	})();
-	*/
+	
 
   /// class (bonus) ///
 
-  /*
+  
 	(function UseClass() {
 		// Let Multiplier be a class with the appropriate methods to succeed.
-		let Multiplier = 'class';
+		class Multiplier { 
+			constructor(power) {this.power = power;}
+			multiply = (x) => x * this.power;
+		}
 
 		// Don't make changes below this line	
 		
@@ -360,7 +363,7 @@ try {
 		
 		solvedBonus++;
 	})();
-	*/
+	
 
   /// Template strings (bonus) ///
 
@@ -405,7 +408,7 @@ try {
 
   /// Destructuring (bonus) ///
 
-  /*
+  
 	(function UseObjectDestructuring2() {
 		let obj = {
 			name: 'Oslo',
@@ -414,10 +417,7 @@ try {
 		}
 		
 		// Use object destructuring to change the 3 statements below into 1 statement.
-		let a = obj.name;
-		let b = obj.age;
-		let c = obj.add;
-
+		let {name: a, age: b, add: c} = obj;
 		// Don't make changes below this line	
 		
 		expect(a).toBe('Oslo');
@@ -426,14 +426,14 @@ try {
 		
 		solvedBonus++;
 	})();
-	*/
+	
 
-  /*
+  
 	(function UseFailSoftDestructuring() {
 		const arr = [1, 2];
 		
     // change the left side (before =) below to let the tests succeed.
-		let [a, b] = arr;
+		let [a, b, c = 3, d] = arr;
 
 		// Don't make changes below this line	
 		
@@ -444,9 +444,9 @@ try {
 
 		solvedBonus++;
 	})();
-	*/
+	
 
-  /*
+  
 	(function UseNestedDestructuring() {
 		let obj = {
 			add: (x, y) => x + y,
@@ -455,9 +455,11 @@ try {
 			};
 		
 		// Use destructuring to change the 3 statements below into 1 statement.
-		let a = obj.add;
-		let b = obj.city.name;
-		let c = obj.arr.slice(1);
+		// let a = obj.add;
+		// let b = obj.city.name;
+		// let c = obj.arr.slice(1);
+
+		let {add: a, name: b = obj.city.name, c = obj.arr.splice(1)} = obj;
 
 		// Don't make changes below this line	
 		
@@ -467,15 +469,15 @@ try {
 		
 		solvedBonus++;
 	})();
-	*/
+	
 
-  /*
+  
   (function UseDestructuring() {
     const arr = [1, 2, 3, 4];
 
     // Use spread & destructuring in the following 2 lines to move the first entry to the last.
-    const [first, rest] = arr;
-    const newArr = [rest, first];
+    const [first, ...rest] = arr;
+    const newArr = [...rest, first];
 
     // Don't make changes below this line
 
@@ -483,20 +485,16 @@ try {
 
     solvedBonus++;
 	})();
-	*/
+	
 
   /// Iterable (bonus) ///
 
-  /*
+  
 	(function UseGeneratorFunction() {
 		// Rewrite the function below to be a generator function ("function*" and "yield").
-		function range(start, end) {
-			let list = [];
-			while (start < end) {
-				list.push(start);
-				start++;
-			}
-			return list;
+		function* range(start, end) {
+			while (start < end) 
+				yield start++;
 		}	
 
 		// Don't make changes below this line	
@@ -510,7 +508,7 @@ try {
 
 		solvedBonus++;
 	})();
-	*/
+	
 
   if (solved === toSolve) {
     console.log(`
