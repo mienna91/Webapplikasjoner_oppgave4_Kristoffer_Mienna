@@ -36,13 +36,13 @@ try {
 
   /// Template strings ///
 
-  /*
+  
 	(function UseTemplateStrings1() {
 		const who = 'World';
 		const addOne = x => x + 1;
 		
 		// Rewrite the line below to use template literals.
-		const greeting = 'Hello {who}! {addOne(2)} times.';
+		const greeting = `Hello ${who}! ${addOne(2)} times.`;
 
 		// Don't make changes below this line	
 		
@@ -50,7 +50,7 @@ try {
 		
 		solved++;
 	})();
-  */
+  
 
   /// functions default parameters ///
 
