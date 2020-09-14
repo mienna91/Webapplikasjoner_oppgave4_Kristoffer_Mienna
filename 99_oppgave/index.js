@@ -130,12 +130,11 @@ try {
 
   /// Arrow functions ///
 
-  /*
+  
 	(function UseArrow1() {
 		// Rewrite double as arrow function and make the test pass.
-		let double = function (x) {
-			return x;
-		};
+		let double =  (x) => {return x*2;}
+
 
 		// Don't make changes below this line	
 		
@@ -144,12 +143,12 @@ try {
 		
 		solved++;
 	})();
-	*/
+	
 
-  /*
+  
 	(function UseArrow2() {
 		// Correct the errors in the arrow function.
-		let add = x, y => return x * y;
+		let add = (x, y) => {return x + y;}
 
 		// Don't make changes below this line	
 		
@@ -158,7 +157,7 @@ try {
 		
 		solved++;
 	})();
-	*/
+	
 
   /// Destructuring ///
 
