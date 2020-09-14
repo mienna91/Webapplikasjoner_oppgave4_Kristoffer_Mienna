@@ -219,8 +219,8 @@ try {
 	})();
 	
 
-  /*
-  (function UseParameterDestructuring1() {
+  
+  /*(function UseParameterDestructuring1() {
     // Adjust the code to let the test succeed.
 
     const a = 'Oslo' + 985;
@@ -259,7 +259,7 @@ try {
 
   /// Property shorthand ///
 
-  /*
+  
 	(function UsePropertyShorthand() {
 		const name = 'Oslo';
 		const age = 985;
@@ -267,8 +267,8 @@ try {
 		
 		// Remove all unnecesary syntax to let the test pass.
 		let city = {
-			name: name,
-			age: age,
+			name,
+			age,
 			dutch: !norwegian
 		};
 
@@ -278,7 +278,7 @@ try {
 		
 		solved++;
 	})();
-	*/
+	
 
   /// Object Spread Properties (ES2018) ///
 
@@ -364,10 +364,10 @@ try {
 
   /// Template strings (bonus) ///
 
-  /*
+  
 	(function UseTemplateStrings2() {
 		// Rewrite the line below to use a template string.
-		const text = 'line 1line 2';
+		const text = `line 1${"\n"}line 2`;
 
 		// Don't make changes below this line	
 		
@@ -375,17 +375,17 @@ try {
 		
 		solvedBonus++;
 	})();
-	*/
+	
 
   /// Arrow functions (bonus) ///
 
-  /*
+  
 	(function UseArrow3() {
 		// Rewrite all functions as arrow functions. Use as minimal syntax as possible.
-		let one = function () { return 1; };
-		let two = function (x) { return x + x; };
-		let three = function (x, y) { return x + y; };
-		let four = function (x, y) {
+		let one = () => { return 1; };
+		let two = (x) => { return x + x; };
+		let three = (x, y) => { return x + y; };
+		let four = (x, y) => {
 			let result = 0;
 			for (let i = x; i < y; i++)
 				result += i;
@@ -401,7 +401,7 @@ try {
 		
 		solvedBonus++;
 	})();
-	*/
+	
 
   /// Destructuring (bonus) ///
 
