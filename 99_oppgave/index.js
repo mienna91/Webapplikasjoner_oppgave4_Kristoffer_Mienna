@@ -161,16 +161,14 @@ try {
 
   /// Destructuring ///
 
-  /*
+  
 	(function UseArrayDestructuring1() {
 		const arr = [1, 2, 3, 4, 5, 6];
 		
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// Tip: Spread operator might be needed too.
-		let a = arr[0];
-		let b = arr[2];
-		let c = arr.slice(3); 
 
+		let [a, d, b, ...c] = arr;
 		// Don't make changes below this line	
 		
 		expect(a).toEqual(1);
@@ -179,19 +177,18 @@ try {
 		
 		solved++;
 	})();
-	*/
+	
 
-  /*
+  
 	(function UseArrayDestructuring2() {
 		let a = 1;
 		let b = 2;
 		
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// You should not need a temporary variable anymore.
-		let tmp = a;
-		a = b;
-		b = tmp; 
-
+ 
+		const arr = [a,b];
+		[b,a] = arr;
 		// Don't make changes below this line	
 		
 		expect(a).toEqual(2);
@@ -199,7 +196,7 @@ try {
 		
 		solved++;
 	})();
-	*/
+	
 
   /*
 	(function UseObjectDestructuring1() {
